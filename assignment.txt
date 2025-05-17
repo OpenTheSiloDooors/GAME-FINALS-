@@ -1,0 +1,9 @@
+On line 84, when the game prompts you how many players there will be, you can't enter a string or else it will crash. You should specify that only integers are accepted.
+
+On line 89, it then asks "Player number 1?". This doesn't convey that the user is supposed to enter the name of their player character.
+
+Changed:
+How many players? --> How many players? Only integers such as 1,2, or 3 are accepted.
+Player Number x? --> What is the name of player number x?
+
+It was simple to find these issues. I discovered them while using the program

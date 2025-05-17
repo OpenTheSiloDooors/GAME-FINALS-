@@ -8,15 +8,15 @@ public class monopoly {
                 return number.nextInt(Max-1)+1;
         }
         public static void main(String[] args) {
-         Player currentPlayer; 
-         String currentPlayerName;  
+         Player currentPlayer;
+         String currentPlayerName;
         int startingMoney=2000;
         int diceRoll;
         String userImput;
         Property currentProperty;
         ArrayList <Property> board=new ArrayList <Property>();
         ArrayList <Player> players=new ArrayList <Player>();
-        Property newProperty;//This is for the making of the properties 
+        Property newProperty;//This is for the making of the properties
     newProperty=new Property("go", 0, 0);
     board.add (newProperty);
     newProperty=new Property ("Mediter-Ranean Avenue",60, 80);
@@ -81,14 +81,14 @@ public class monopoly {
     board.add (newProperty);
     newProperty=new Property("Boardwalk",400,410);
     board.add (newProperty);
-    System.out.println("How many players?");
+    System.out.println("How many players? Only integers such as 1,2, or 3 are accepted.");
     Scanner imput=new Scanner (System.in);
     int numberOfPlayers = imput.nextInt();
     currentPlayerName=imput.nextLine();
     for(int x=0;x<numberOfPlayers;x++){
-        System.out.println("Player Number "+(x+1) +"?");
+        System.out.println("What is the name of player number "+(x+1) +"?");
         currentPlayerName=imput.nextLine();
-       
+
         currentPlayer= new Player(currentPlayerName);
         currentPlayer.depositMoney(startingMoney);
         players.add(currentPlayer);
